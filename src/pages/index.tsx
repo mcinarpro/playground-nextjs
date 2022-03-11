@@ -2,9 +2,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import {
-    decrement, increment, incrementByAmount, selectCount
-} from "../features/counter/counterSlice";
+import { decrement, increment, incrementByAmount, selectCount } from "../features/counter";
 
 const Home: NextPage = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +13,7 @@ const Home: NextPage = () => {
     <>
       <h1>Welcome to the greatest app in the world!</h1>
       <h2>
-        The current number is
+        The current number is{" "}
         {count}
       </h2>
       <div>
