@@ -1,17 +1,20 @@
-import type { NextPage } from "next";
 import { useState } from "react";
 
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { decrement, increment, incrementByAmount, selectCount } from "../features/counter";
+import Test from "@/components/Test";
 
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { countSelector, decrement, increment, incrementByAmount } from "../features/counter";
+
+import type { NextPage } from "next";
 const Home: NextPage = () => {
   const dispatch = useAppDispatch();
-  const count = useAppSelector(selectCount);
+  const count = useAppSelector(countSelector);
   const [incrementAmount, setIncrementAmount] = useState<number>(0);
 
   return (
     <>
       <h1>Welcome to the greatest app in the world!</h1>
+      <Test />
       <h2>
         The current number is{" "}
         {count}
