@@ -27,9 +27,9 @@ export default function Pokemon({ pokemon }: { pokemon: Pokemon[] }) {
 
   return (
     <>
-      <Input placeholder="Next UI" value={filter} onChange={(e) => setFilter(e.target.value)} />
+      <Input placeholder="Filter Pokemon" value={filter} onChange={(e) => setFilter(e.target.value)} />
       <Grid.Container gap={2} justify="flex-start">
-        {filteredPokemon.slice(0, 20).map((p) => (
+        {filteredPokemon.slice(0, 100).map((p) => (
           <Grid xs={6} sm={3} md={2} xl={1} key={p.id}>
             <Card
               hoverable
